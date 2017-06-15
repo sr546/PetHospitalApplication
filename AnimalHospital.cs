@@ -70,21 +70,18 @@ namespace PetsHospitalApplication
         {
             for (int i = 0; i < dogList.Count; i++)
             {
-                //Console.WriteLine("The following are the list of dogs");
-                //Console.WriteLine(dogList.ElementAt(i).GetpetInfo());
+                
                 if (dogList.ElementAt(i).petName.Equals(name))
                     Console.WriteLine(dogList.ElementAt(i).GetpetInfo());
             }
-            //for cat
-            // Console.WriteLine("The size of the cat list is {0}", catList.Count);
+            
             for (int i = 0; i < catList.Count; i++)
             {
-                //Console.WriteLine("The following are the list of cats");
-                //catList.ElementAt(i).GetpetInfo();
+                
                 if (catList.ElementAt(i).petName.Equals(name))
                     Console.WriteLine(catList.ElementAt(i).GetpetInfo());
             }
-            //for bird
+            
             for (int i = 0; i < birdList.Count; i++)
             {
                 if (birdList.ElementAt(i).petName.Equals(name))
@@ -96,21 +93,19 @@ namespace PetsHospitalApplication
         {
             for (int i = 0; i < dogList.Count; i++)
             {
-                //Console.WriteLine("The following are the list of dogs");
-                //Console.WriteLine(dogList.ElementAt(i).GetpetInfo());
+                
                 if (dogList.ElementAt(i).ownerName.Equals(name))
                     Console.WriteLine(dogList.ElementAt(i).GetpetInfo());
             }
-            //for cat
-            // Console.WriteLine("The size of the cat list is {0}", catList.Count);
+            
+            
             for (int i = 0; i < catList.Count; i++)
             {
-                //Console.WriteLine("The following are the list of cats");
-                //catList.ElementAt(i).GetpetInfo();
+                
                 if (catList.ElementAt(i).ownerName.Equals(name))
                     Console.WriteLine(catList.ElementAt(i).GetpetInfo());
             }
-            //for bird
+            
             for (int i = 0; i < birdList.Count; i++)
             {
                 if (birdList.ElementAt(i).ownerName.Equals(name))
