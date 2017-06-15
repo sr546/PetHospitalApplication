@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace PetsHospitalApplication
 {
@@ -11,18 +8,23 @@ namespace PetsHospitalApplication
         static void Main(string[] args)
         {
             AnimalHospital animal = new AnimalHospital("name");
+             StreamWriter file = new StreamWriter("Log.txt"); 
+            
+
             Console.WriteLine("::Pets Hospital Application:: \n" +
                                 "*******************************");
 
 
-            int taskno;
+            int taskno=0;
             do
             {
                 Console.WriteLine(" 1. Search by Pet name \n 2. Search by Owner name \n 3. Search by date \n 4.Exit \n ( * --> mandatory )");
                 Console.WriteLine("*Please enter the task number you want to perform:");
-                //while((Console.ReadLine()).Length)
-                
+
+                try
+                {
                     taskno = Convert.ToInt32(Console.ReadLine());
+
 
                     Console.ReadLine();
 
@@ -58,9 +60,21 @@ namespace PetsHospitalApplication
                         Console.Write("\n\n Please enter valid task number..Press any key to return");
                         Console.ReadKey(true);
                     }
-                
-            } while (taskno != 4);
-        }
-    }
+                }
+                    catch (FormatException e)
+                    {
+                        Console.WriteLine("Entered Invalid option...!!!!!");
+                        file.WriteLine(e.Source);
+                        Console.ReadKey();
+                    }
+                finally
+                {
+                  //nocode
+                }
 
+
+                } while (taskno != 4);
+        }
+                
+    }
 }
